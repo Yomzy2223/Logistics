@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const EmailSubscribe = () => {
   return (
