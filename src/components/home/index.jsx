@@ -80,6 +80,7 @@ export default Home;
 
 const HomeContainer = styled.div`
   width: 100%;
+  padding-inline: clamp(30px, 4vw, 50px);
 `;
 
 const HomeTop = styled.div`

@@ -4,11 +4,13 @@ import HomePage from "./pages";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Outlet />}>
-        <Route index element={<HomePage />} />
-      </Route>
-    </Routes>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Outlet />}>
+          <Route index element={<HomePage />} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 

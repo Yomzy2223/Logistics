@@ -41,6 +41,7 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 65px;
+  padding-inline: clamp(30px, 4vw, 50px);
 `;
 const HeaderLeft = styled.div`
   display: flex;

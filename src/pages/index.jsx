@@ -2,12 +2,16 @@ import React from "react";
 import Header from "../components/header";
 import styled from "styled-components";
 import Home from "../components/home";
+import Services from "../components/services";
+import Bottom from "../components/bottom";
 
 const HomePage = () => {
   return (
     <HomepageContainer>
       <Header />
       <Home />
+      <Services />
+      <Bottom />
     </HomepageContainer>
   );
 };
@@ -15,6 +19,5 @@ const HomePage = () => {
 export default HomePage;
 
 const HomepageContainer = styled.div`
-  padding-inline: clamp(30px, 4vw, 50px);
-  overflow: hidden;
+  max-width: 1400px;
 `;
