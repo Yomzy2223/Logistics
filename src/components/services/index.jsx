@@ -83,6 +83,7 @@ const BottomLeft = styled.div`
   }
 
   @media screen and (max-width: 920px) {
+    justify-content: center;
     width: 100%;
   }
 `;
