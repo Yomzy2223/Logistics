@@ -57,6 +57,7 @@ const HeaderLeft = styled.div`
 const HeaderRight = styled.div`
   display: flex;
   align-items: center;
+
   button {
     background-color: white;
     padding: 10px 16px;

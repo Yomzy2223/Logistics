@@ -10,16 +10,12 @@ import { AiOutlineArrowRight, AiFillStar } from "react-icons/ai";
 const Home = () => {
   return (
     <HomeContainer>
-      {/* <BackVideo autoPlay loop muted>
-        <source src={gif1} type="video/mp4" />
-      </BackVideo> */}
       <HomeTop>
         <TopLeft>
           <p>Onard Intl Delivery service at your doorstep in 5mins</p>
           <p>
             We take care of your trip and your courier services efficiently.
           </p>
-          {/* <p>Just call us</p> */}
           <TopButtons>
             <button>Contact Us</button>
             <p>
@@ -35,31 +31,13 @@ const Home = () => {
               <AiFillStar color="#FFA800" />
               <AiFillStar color="#FFA800" />
             </div>
-            {/* <div>
-              <span>120</span>
-              <span>Branch</span>
-            </div>
-            <div>
-              <span>2M+</span>
-              <span>Clients</span>
-            </div>
-            <div>
-              <span>4262</span>
-              <span>Support</span>
-            </div>
-            <div>
-              <span>26+</span>
-              <span>Country</span>
-            </div> */}
           </Count>
         </TopLeft>
         <TopRight>
           <img src={img11} alt="" />
-          <Label>
-            <span>
-              <p>Best</p> <p>Courier Services</p>
-            </span>
-          </Label>
+          <Label>Door step delivery</Label>
+          <Label1>Pay on delivery</Label1>
+          <Label2>Easy tracking of orders</Label2>
         </TopRight>
       </HomeTop>
       <HomeBottom>
@@ -214,6 +192,7 @@ const TopRight = styled.div`
   align-items: center;
   justify-content: flex-end;
   position: relative;
+  font-size: 12px;
 
   img {
     max-width: 100%;
@@ -222,26 +201,34 @@ const TopRight = styled.div`
 
 const Label = styled.div`
   position: absolute;
+  top: 60px;
+  left: 10%;
   z-index: 2;
-  background-color: white;
-  border-radius: 5px;
+  background-color: #ff06f5;
+  color: white;
+  border-radius: 30px;
   padding: 5px 10px;
-  box-shadow: 0 0 15px 2px #8a8a8a7d;
-
-  span {
-    p {
-      :nth-of-type(1) {
-        color: #fc6b21;
-        font-weight: 800;
-        font-size: clamp(18px, 2.2vw, 22px);
-      }
-
-      :nth-of-type(2) {
-        color: #5732fb;
-        font-size: 12px;
-      }
-    }
-  }
+`;
+const Label1 = styled.div`
+  position: absolute;
+  /* top: 180px;
+  left: 120px; */
+  top: 45%;
+  left: 25%;
+  z-index: 2;
+  background-color: #ffa800;
+  color: white;
+  border-radius: 30px;
+  padding: 5px 10px;
+`;
+const Label2 = styled.div`
+  position: absolute;
+  top: 120px;
+  z-index: 2;
+  background-color: #3118cb;
+  color: white;
+  border-radius: 30px;
+  padding: 5px 10px;
 `;
 
 const HomeBottom = styled.div`
