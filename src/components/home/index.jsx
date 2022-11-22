@@ -85,16 +85,6 @@ const HomeContainer = styled.div`
   background: url(gif1);
 `;
 
-const BackVideo = styled.video`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  display: flex;
-  flex: 1;
-  width: calc(100% - clamp(60px, 8vw, 100px));
-`;
-
 const HomeTop = styled.div`
   display: flex;
   flex-flow: row nowrap;
@@ -213,8 +203,6 @@ const Label = styled.div`
 `;
 const Label1 = styled.div`
   position: absolute;
-  /* top: 180px;
-  left: 120px; */
   top: 45%;
   left: 25%;
   z-index: 2;
@@ -222,6 +210,10 @@ const Label1 = styled.div`
   color: white;
   border-radius: 30px;
   padding: 5px 10px;
+
+  @media screen and (max-width: 400px) {
+    top: 80%;
+  }
 `;
 const Label2 = styled.div`
   position: absolute;
