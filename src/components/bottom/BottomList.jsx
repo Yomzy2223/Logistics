@@ -37,4 +37,10 @@ const BottomListContainer = styled.div`
     font-size: clamp(10px, 1vw, 12px);
     color: #d0d0d0;
   }
+
+  @media screen and (max-width: 920px) {
+    div {
+      display: none;
+    }
+  }
 `;

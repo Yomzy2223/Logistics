@@ -2,19 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Car1 } from "../../assets";
 
-const ServicesCard = () => {
+const ServicesCard = ({ title, body }) => {
   return (
     <ServicesCardContainer>
       <CardLeft>
         <img src={Car1} alt="" />
       </CardLeft>
       <CardRight>
-        <p>Mobile & ICT Equipment Service</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          quod officiis aspernatur a, enim quos repellat voluptate rem rerum
-          qui.
-        </p>
+        <p>{title}</p>
+        <p>{body}</p>
       </CardRight>
     </ServicesCardContainer>
   );
@@ -55,7 +51,7 @@ const CardRight = styled.div`
   p {
     :nth-of-type(1) {
       font-size: clamp(14px, 1.4vw, 16px);
-      font-weight: 600;
+      font-weight: 700;
     }
     :nth-of-type(2) {
       font-size: clamp(12px, 1.4vw, 14px);

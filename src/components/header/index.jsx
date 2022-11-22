@@ -8,9 +8,7 @@ const Header = () => {
     <HeaderContainer>
       <HeaderLeft>
         <HeaderLink>
-          <NavLink>
-            <img src={logo} alt="" />
-          </NavLink>
+          <img src={logo} alt="" />
         </HeaderLink>
         <HeaderLink>
           <NavLink>Home</NavLink>
@@ -47,6 +45,13 @@ const HeaderLeft = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  z-index: -2;
+
+  @media screen and (max-width: 700px) {
+    a {
+      display: none;
+    }
+  }
 `;
 
 const HeaderRight = styled.div`
@@ -82,6 +87,8 @@ const HeaderLink = styled.span`
   }
 
   img {
+    position: relative;
     width: 100px;
+    left: -15px;
   }
 `;

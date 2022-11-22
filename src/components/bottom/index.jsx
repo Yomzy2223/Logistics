@@ -8,32 +8,34 @@ const Bottom = () => {
   return (
     <BottomContainer>
       <Top>
-        <BottomList
-          title="Useful Links"
-          body={[
-            "Home",
-            "Services",
-            "Apply Agency",
-            "Notice Board",
-            "Branches Location",
-            "Recruiting",
-          ]}
-        />
-        <BottomList
-          title="Our Services"
-          body={[
-            "Courier Service",
-            "Parcel Service",
-            "Value Decleared",
-            "E-com service",
-            "Corp Credit Service",
-          ]}
-        />
-        <BottomList title="Information" body={["FAQ", "Blog", "Support"]} />
-        <BottomList
-          title="Help"
-          body={["Help Center", "Tools", "Product and Service"]}
-        />
+        <AllList>
+          <BottomList
+            title="Useful Links"
+            body={[
+              "Home",
+              "Services",
+              "Apply Agency",
+              "Notice Board",
+              "Branches Location",
+              "Recruiting",
+            ]}
+          />
+          <BottomList
+            title="Our Services"
+            body={[
+              "Courier Service",
+              "Parcel Service",
+              "Value Decleared",
+              "E-com service",
+              "Corp Credit Service",
+            ]}
+          />
+          <BottomList title="Information" body={["FAQ", "Blog", "Support"]} />
+          <BottomList
+            title="Help"
+            body={["Help Center", "Tools", "Product and Service"]}
+          />
+        </AllList>
         <EmailSubscribe />
       </Top>
       <Divider />
@@ -65,13 +67,28 @@ const BottomContainer = styled.div`
 const Top = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   width: 100%;
+
+  @media screen and (max-width: 920px) {
+    align-items: center;
+    flex-flow: column;
+  }
 `;
+
+const AllList = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+`;
+
 const Divider = styled.div`
   background-color: #7b7b7b;
   height: 1px;
   width: 100%;
 `;
+
 const Down = styled.div`
   display: flex;
   justify-content: center;

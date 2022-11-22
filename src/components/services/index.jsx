@@ -18,9 +18,18 @@ const Services = () => {
           <img src={Dispather} alt="" />
         </BottomLeft>
         <BottomRight>
-          <ServicesCard />
-          <ServicesCard />
-          <ServicesCard />
+          <ServicesCard
+            title="Onard Delivery Service"
+            body="We are No. 1 logistics and moving company for Household & Office Relocation in Nigeria Nigeria's fastest growing haulage household and office moving company."
+          />
+          <ServicesCard
+            title="Onard Trip service"
+            body="Onard gices you the power to get where you want to go with access to different types of trips across more then 10,000 cities."
+          />
+          <ServicesCard
+            title="Onard Delivery Service"
+            body="We are No. 1 logistics and moving company for Household & Office Relocation in Nigeria Nigeria's fastest growing haulage household and office moving company."
+          />
         </BottomRight>
       </ServicesBottom>
     </ServicesContainer>
@@ -55,6 +64,11 @@ const ServicesTop = styled.div`
 const ServicesBottom = styled.div`
   display: flex;
   gap: 6%;
+
+  @media screen and (max-width: 920px) {
+    flex-flow: column;
+    gap: 40px;
+  }
 `;
 
 const BottomLeft = styled.div`
@@ -67,11 +81,20 @@ const BottomLeft = styled.div`
     max-width: 400px;
     border-radius: 150px;
   }
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
+  }
 `;
 
 const BottomRight = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: space-around;
+  gap: 30px;
   width: 47%;
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
+  }
 `;

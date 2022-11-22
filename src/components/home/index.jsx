@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { img1Clean, logistics1 } from "../../assets";
+import { gif1, img1Clean, logistics1 } from "../../assets";
 import { BsTruck } from "react-icons/bs";
 import { GiBoxUnpacking } from "react-icons/gi";
 import { TbDeviceDesktopAnalytics } from "react-icons/tb";
@@ -9,9 +9,18 @@ import { MdDeliveryDining } from "react-icons/md";
 const Home = () => {
   return (
     <HomeContainer>
+      {/* <BackVideo autoPlay loop muted>
+        <source src={gif1} type="video/mp4" />
+      </BackVideo> */}
       <HomeTop>
         <TopLeft>
-          <p>Take the hassles out of your delivery!</p>
+          <p>
+            <span>Onard Intl</span>
+            <span>Delivery service</span>
+            <span>at your doorstep.</span>
+            {/* <span>We also take care of</span>
+            <span>Your trip.</span> */}
+          </p>
           <p>Just call us</p>
           <button>Call now</button>
           <Count>
@@ -79,13 +88,34 @@ const Home = () => {
 export default Home;
 
 const HomeContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+  position: relative;
   width: 100%;
   padding-inline: clamp(30px, 4vw, 50px);
+  background: url(gif1);
+`;
+
+const BackVideo = styled.video`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  flex: 1;
+  width: calc(100% - clamp(60px, 8vw, 100px));
 `;
 
 const HomeTop = styled.div`
   display: flex;
   flex-flow: row nowrap;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 920px) {
+    flex-flow: column;
+    align-items: center;
+    gap: 40px;
+  }
 `;
 
 const TopLeft = styled.div`
@@ -96,24 +126,46 @@ const TopLeft = styled.div`
   color: black;
   text-transform: capitalize;
   max-width: 50%;
+
+  @media screen and (max-width: 920px) {
+    max-width: 100%;
+    align-items: stretch;
+  }
+
   p {
     font-weight: 800;
+    opacity: 0.8;
+
     :nth-of-type(1) {
       font-size: clamp(32px, 3vw, 40px);
+      margin-bottom: 50px;
     }
 
     :nth-of-type(2) {
       font-size: clamp(25px, 2.2vw, 30px);
-      color: #fc6b21;
-      background-color: #ffefe5;
+      color: #078fff;
+      background-color: #e3f2ffa6;
       border-radius: 5px;
       width: max-content;
       padding: 5px 15px;
     }
+
+    span {
+      margin-right: 5px;
+      :nth-of-type(1) {
+        color: #5732fb;
+      }
+      :nth-of-type(2) {
+        color: #fc6b21;
+      }
+      :nth-of-type(5) {
+        color: #fc6b21;
+      }
+    }
   }
 
   button {
-    padding: 15px 40px;
+    padding: clamp(10px, 1.2vw, 15px) clamp(30px, 3.4vw, 40px);
     color: white;
     background-color: #5732fb;
     border: 1px solid #5732fb;
@@ -174,7 +226,7 @@ const Label = styled.div`
       :nth-of-type(1) {
         color: #fc6b21;
         font-weight: 800;
-        font-size: 30px;
+        font-size: clamp(18px, 2.2vw, 22px);
       }
 
       :nth-of-type(2) {
@@ -190,13 +242,22 @@ const HomeBottom = styled.div`
   justify-content: space-around;
   gap: 30px;
   background-color: #1e1c29;
-  margin-top: 100px;
   padding: 20px;
   color: white;
 
   > img {
     width: 30%;
     max-width: 250px;
+  }
+
+  @media screen and (max-width: 920px) {
+    align-items: center;
+    flex-flow: column;
+    gap: 50px;
+
+    > img {
+      width: 100%;
+    }
   }
 `;
 
@@ -212,6 +273,15 @@ const BottomRight = styled.div`
     max-width: 170px;
     line-height: 35px;
     margin-top: -10px;
+  }
+
+  @media screen and (max-width: 920px) {
+    flex-flow: column;
+    gap: 30px;
+
+    > p {
+      text-align: center;
+    }
   }
 `;
 
