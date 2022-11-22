@@ -125,7 +125,7 @@ const TopButtons = styled.div`
 const TopLeft = styled.div`
   display: flex;
   flex-flow: column;
-  gap: 30px;
+  gap: 50px;
   padding-top: 30px;
   color: black;
   text-transform: capitalize;
@@ -149,6 +149,8 @@ const TopLeft = styled.div`
       font-size: clamp(18px, 2vw, 22px);
       line-height: 32px;
       color: #515151;
+      position: relative;
+      top: -20px;
       text-align: justify;
     }
 
