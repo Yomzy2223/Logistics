@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { gif1, img1Clean, logistics1 } from "../../assets";
+import { gif1, img11, img1Clean, logistics1 } from "../../assets";
 import { BsTruck } from "react-icons/bs";
 import { GiBoxUnpacking } from "react-icons/gi";
 import { TbDeviceDesktopAnalytics } from "react-icons/tb";
 import { MdDeliveryDining } from "react-icons/md";
+import { AiOutlineArrowRight, AiFillStar } from "react-icons/ai";
 
 const Home = () => {
   return (
@@ -14,17 +15,27 @@ const Home = () => {
       </BackVideo> */}
       <HomeTop>
         <TopLeft>
+          <p>Onard Intl Delivery service at your doorstep in 5mins</p>
           <p>
-            <span>Onard Intl</span>
-            <span>Delivery service</span>
-            <span>at your doorstep.</span>
-            {/* <span>We also take care of</span>
-            <span>Your trip.</span> */}
+            We take care of your trip and your courier services efficiently.
           </p>
-          <p>Just call us</p>
-          <button>Call now</button>
+          {/* <p>Just call us</p> */}
+          <TopButtons>
+            <button>Contact Us</button>
+            <p>
+              Learn More <AiOutlineArrowRight />
+            </p>
+          </TopButtons>
           <Count>
+            <p>Google</p>
             <div>
+              <AiFillStar color="#FFA800" />
+              <AiFillStar color="#FFA800" />
+              <AiFillStar color="#FFA800" />
+              <AiFillStar color="#FFA800" />
+              <AiFillStar color="#FFA800" />
+            </div>
+            {/* <div>
               <span>120</span>
               <span>Branch</span>
             </div>
@@ -39,11 +50,11 @@ const Home = () => {
             <div>
               <span>26+</span>
               <span>Country</span>
-            </div>
+            </div> */}
           </Count>
         </TopLeft>
         <TopRight>
-          <img src={img1Clean} alt="" />
+          <img src={img11} alt="" />
           <Label>
             <span>
               <p>Best</p> <p>Courier Services</p>
@@ -118,6 +129,21 @@ const HomeTop = styled.div`
   }
 `;
 
+const TopButtons = styled.div`
+  display: flex;
+  gap: clamp(30px, 4.5vw, 60px);
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0071f6;
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-weight: 500;
+    line-height: 19px;
+  }
+`;
+
 const TopLeft = styled.div`
   display: flex;
   flex-flow: column;
@@ -132,35 +158,26 @@ const TopLeft = styled.div`
     align-items: stretch;
   }
 
-  p {
+  > p {
     font-weight: 800;
     opacity: 0.8;
 
     :nth-of-type(1) {
       font-size: clamp(32px, 3vw, 40px);
-      margin-bottom: 50px;
     }
 
     :nth-of-type(2) {
-      font-size: clamp(25px, 2.2vw, 30px);
-      color: #078fff;
-      background-color: #e3f2ffa6;
-      border-radius: 5px;
-      width: max-content;
-      padding: 5px 15px;
+      font-weight: 400;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 32px;
+      color: #515151;
+      text-align: justify;
     }
 
     span {
-      margin-right: 5px;
-      :nth-of-type(1) {
-        color: #5732fb;
-      }
-      :nth-of-type(2) {
-        color: #fc6b21;
-      }
-      :nth-of-type(5) {
-        color: #fc6b21;
-      }
+      font-size: clamp(50px, 5.5vw, 64px);
+      font-weight: 500;
+      line-height: 72px;
     }
   }
 
@@ -183,22 +200,12 @@ const TopLeft = styled.div`
 
 const Count = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 
   div {
     display: flex;
-    flex-flow: column;
-
-    span {
-      :nth-of-type(1) {
-        font-size: 20px;
-        font-weight: 800;
-      }
-      :nth-of-type(2) {
-        font-size: 12px;
-        font-weight: 300;
-      }
-    }
+    gap: 4px;
   }
 `;
 
