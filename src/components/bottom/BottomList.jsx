@@ -24,6 +24,7 @@ const BottomListContainer = styled.div`
   > p {
     font-weight: 600;
     font-size: clamp(14px, 1.4vw, 16px);
+    text-align: center;
   }
 
   > div {
